@@ -10,4 +10,4 @@
 
 ---
 
-- [ ]  vending_machine - 자판기 프로그램
+- [x]  vending_machine - 자판기 프로그램
