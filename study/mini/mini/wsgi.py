@@ -1,5 +1,5 @@
 """
-WSGI config for Devmap project.
+WSGI config for mini project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Devmap.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mini.settings')
 
 application = get_wsgi_application()
