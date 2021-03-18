@@ -8,7 +8,7 @@
 
 -   ex2.html
 
-### datatype
+### Data Type
 
 1. Boolean
 2. Null
