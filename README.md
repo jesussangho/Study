@@ -8,6 +8,18 @@
 
 -   ex2.html
 
-### datatype\string
+### datatype
 
--   string.js
+1. Boolean
+2. Null
+3. Undefined
+4. Number
+5. String
+6. Symbol(ECMAScript 6에 추가)
+7. Object
+
+### Variables
+
+1. constants
+2. let
+3. variables
