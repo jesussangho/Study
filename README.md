@@ -23,3 +23,7 @@
 1. constants
 2. let
 3. variables
+
+### CSS 기초
+
+-   ex3.html
