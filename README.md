@@ -36,3 +36,7 @@
 
 -   ex5.html
 -   ex3.html (수정)
+
+### 배열
+
+-   ex6.html
