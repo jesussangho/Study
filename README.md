@@ -40,9 +40,6 @@
 ### 배열
 
 -   ex6.html
-
-### 배열과 반복문
-
 -   ex7.html
 -   ex8.html
 
@@ -50,3 +47,8 @@
 
 -   ex9.html
 -   ex10.html
+
+### 객체
+
+-   ex11.html
+-   ex12.html
