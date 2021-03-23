@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .js {
+            /* class = ., 그룹핑, ex) 학교 - 반 */
+            font-weight: bold;
+            color: red;
+        }
+
+        #first {
+            /* id = #, 한 가지 대상을 식별, ex) 학교 - 학번 */
+            color: green;
+        }
+
+        span {
+            color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        var Links = {
+            setColor: function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
+            }
+        }
+        // function LinksSetColor(color) {
+        //     var alist = document.querySelectorAll('a');
+        //     var i = 0;
+        //     while (i < alist.length) {
+        //         alist[i].style.color = color;
+        //         i = i + 1;
+        //     }
+        // }
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        // function BodySetColor(color) {
+        //     document.querySelector('body').style.color = color;
+        // }
+        // function BodySetBackgroundColor(color) {
+        //     document.querySelector('body').style.backgroundColor = color;
+        // }
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day';
+
+                Links.setColor('powderblue');
+            } else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black')
+                self.value = 'night';
+
+                Links.setColor('blue');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <!-- 
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    "> -->
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <h2 style="background-color:coral;color:powderblue;">JavaScript</h2>
+    <p>
+        <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level,
+        dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside
+        <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the three core technologies
+        of World Wide Web content production. It is used to make webpages interactive and provide online programs,
+        including video games. The majority of websites employ it, and all modern web browsers support it without the
+        need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span
+            class="js">JavaScript</span> engines represent a different implementation of <span
+            class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting
+        the spec fully, and with many engines supporting additional features beyond ECMA.
+    </p>
+</body>
+
+</html>
