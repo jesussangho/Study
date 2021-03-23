@@ -1,5 +1,7 @@
 # javascript_study
 
+## Javascript
+
 ### HTML과 JS의 만남 : script 태그
 
 -   ex1.html
@@ -52,3 +54,7 @@
 
 -   ex11.html
 -   ex12.html
+
+### Jquery
+
+-   ex13.html
