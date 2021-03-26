@@ -18,29 +18,29 @@ var app = http.createServer(function (request, response) {
     // console.log(__dirname + _url);
     // response.end(fs.readFileSync(__dirname + _url));
     // response.end("sangho : " + _url);
-    var template = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    fs.readFile(`data/${queryData.id}`, "utf-8", function (err, description) {
+        var template = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sangho ${title}</title>
-    </head>
-    <body>
-        <h1><a href="/">Web Study</h1>
-        <ul>
-            <li><a href="/?id=home">home</a></li>
-            <li><a href="/?id=Portfolio">Portfolio</a></li>
-            <li><a href="/?id=About">About</a></li>
-        </ul>
-        <h2>${title}</h2>
-        <p>
-            Welcome to Web Study!
-        </p>
-    </body>
-    </html>
+        </head>
+        <body>
+            <h1><a href="/?id=welcome">Web Study</h1>
+            <ul>
+                <li><a href="/?id=home">home</a></li>
+                <li><a href="/?id=Portfolio">Portfolio</a></li>
+                <li><a href="/?id=About">About</a></li>
+            </ul>
+            <h2>${title}</h2>
+            <p>${description}</p>
+        </body>
+        </html>
     `;
-    response.end(template);
+        response.end(template);
+    });
 });
 app.listen(3000);
