@@ -9,6 +9,8 @@ var app = http.createServer(function (request, response) {
     var title = queryData.id;
 
     if (pathname === "/") {
+        if (queryData.id === undefined) {
+        }
         fs.readFile(
             `data/${queryData.id}`,
             "utf-8",
@@ -23,7 +25,7 @@ var app = http.createServer(function (request, response) {
             <title>Sangho ${title}</title>
             </head>
             <body>
-                <h1><a href="/?id=welcome">Web Study</h1>
+                <h1><a href="/">Web Study</h1>
                 <ul>
                     <li><a href="/?id=home">home</a></li>
                     <li><a href="/?id=Portfolio">Portfolio</a></li>
