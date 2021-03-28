@@ -19,6 +19,7 @@
 -   Array (배열)
 -   Loop (반복문)
 -   Array-Loop (배열 반복문)
+-   Function (함수)
 
 ### nodejs
 
