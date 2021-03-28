@@ -10,12 +10,9 @@ var app = http.createServer(function (request, response) {
 
     if (pathname === "/") {
         if (queryData.id === undefined) {
-        }
-        fs.readFile(
-            `data/${queryData.id}`,
-            "utf-8",
-            function (err, description) {
-                var template = `
+            var title = "Welcome";
+            var description = "Hello, Node.js";
+            var template = `
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -35,11 +32,41 @@ var app = http.createServer(function (request, response) {
                 <p>${description}</p>
             </body>
             </html>
-        `;
-                response.writeHead(200);
-                response.end(template);
-            }
-        );
+            `;
+            response.writeHead(200);
+            response.end(template);
+        } else {
+            fs.readFile(
+                `data/${queryData.id}`,
+                "utf-8",
+                function (err, description) {
+                    var title = queryData.id;
+                    var template = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Sangho ${title}</title>
+                </head>
+                <body>
+                    <h1><a href="/">Web Study</h1>
+                    <ul>
+                        <li><a href="/?id=home">home</a></li>
+                        <li><a href="/?id=Portfolio">Portfolio</a></li>
+                        <li><a href="/?id=About">About</a></li>
+                    </ul>
+                    <h2>${title}</h2>
+                    <p>${description}</p>
+                </body>
+                </html>
+            `;
+                    response.writeHead(200);
+                    response.end(template);
+                }
+            );
+        }
     } else {
         response.writeHead(404);
         response.end("Not Found");
