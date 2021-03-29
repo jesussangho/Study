@@ -22,6 +22,7 @@
 -   Function (함수)
 -   Sync (동기, 비동기)
 -   Callback (콜백)
+-   form (전송 form)
 
 ### nodejs
 
