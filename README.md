@@ -23,6 +23,7 @@
 -   Sync (동기, 비동기)
 -   Callback (콜백)
 -   form (전송 form)
+-   Object (객체)
 
 ### nodejs
 
