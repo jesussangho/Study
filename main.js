@@ -4,7 +4,9 @@ var url = require("url");
 var qs = require("querystring");
 var template = require("./lib/template.js");
 var path = require("path");
+var sanitizeHtml = require("sanitize-html");
 // refactoring
+// npm sanitize html : script , style, textarea tags 살균, 소독
 
 var app = http.createServer(function (request, response) {
     var _url = request.url;
@@ -35,13 +37,17 @@ var app = http.createServer(function (request, response) {
                     "utf-8",
                     function (err, description) {
                         var title = queryData.id;
+                        var sanitizedTitle = sanitizeHtml(title);
+                        var sanitizedDescription = sanitizeHtml(description, {
+                            allowedTags: ["h1"], // tag 허용
+                        });
                         var list = template.list(filelist);
                         var html = template.html(
-                            title,
+                            sanitizedTitle,
                             list,
-                            `<h2>${title}</h2>${description}`,
-                            `<a href="/create">create</a> <a href="/update?id=${title}">update</a> <form action="delete_process" method="post">
-                            <input type="hidden" name="id" value="${title}">
+                            `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
+                            `<a href="/create">create</a> <a href="/update?id=${sanitizedTitle}">update</a> <form action="delete_process" method="post">
+                            <input type="hidden" name="id" value="${sanitizedTitle}">
                             <input type="submit" value="delete">
                             </form>`
                         );
