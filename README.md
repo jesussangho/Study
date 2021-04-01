@@ -28,3 +28,37 @@
 ### WSL2 Open Ports
 
     > nmap localhost
+
+### Creating and Selecting a Database
+
+    > mysql> CREATE DATABASE [DB 명];
+    > SHOW DATABASES;
+    > USE [DB 명];
+
+### SQL
+
+    Structured (구조화)
+    Query (질의)
+    Language (언어)
+
+### TABLE, 표
+
+![image](https://user-images.githubusercontent.com/66219179/113300139-9ad47a80-9338-11eb-9cf4-f575ff9a6efb.png)
+
+### test.sql
+
+![image](https://user-images.githubusercontent.com/66219179/113303865-75e20680-933c-11eb-979e-bd6504014e04.png)
+
+### Data Types
+
+    INT - 정수
+    NOT NULL - 데이터가 없으면 안된다
+    AUTO_INCREMENT - 자동 증가
+    VARCHAR - 가변적인 문자열
+    TEXT - 텍스트
+    Date and Time Data Types - 날짜, 시간
+    - DATE : '0000-00-00'
+    - TIME : '00:00:00'
+    - DATETIME : '0000-00-00 00:00:00'
+    - TIMESTAMP : '0000-00-00 00:00:00'
+    - YEAR : 0000
