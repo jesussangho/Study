@@ -51,10 +51,10 @@
 
 ### Data Types
 
-    INT - 정수
+    INT - 정수 (소수점이 없는, ex) -147, 0)
     NOT NULL - 데이터가 없으면 안된다
     AUTO_INCREMENT - 자동 증가
-    VARCHAR - 가변적인 문자열
+    VARCHAR - 가변적인 문자
     TEXT - 텍스트
     Date and Time Data Types - 날짜, 시간
     - DATE : '0000-00-00'
