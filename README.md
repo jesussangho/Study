@@ -2,7 +2,7 @@
 
 ### To-Do-List
 
--   Refactoring plan
+-   javascript To-Do-List
 
 ### bolier-plate-ko
 
